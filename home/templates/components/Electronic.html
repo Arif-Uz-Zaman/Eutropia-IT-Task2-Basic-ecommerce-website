@@ -1,0 +1,135 @@
+{% load static %}
+
+<div class="fashion_section">
+    <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <h1 class="fashion_taital">Electronic</h1>
+            <div class="fashion_section_2">
+              <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">Laptop 0</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ 800</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="All_images/All_images/laptop-img.png" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">T-Mobile</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ 230</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="All_images/All_images/mobile-img.png" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">Computer core i5</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ 1100</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="All_images/All_images/computer-img.png" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% for lap,mob,com in electronics %}
+        <div class="carousel-item">
+          <div class="container">
+            <h1 class="fashion_taital">Electronic</h1>
+            <div class="fashion_section_2">
+              <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{lap.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{lap.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                       <img src="{{ lap.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{mob.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{mob.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="{{ mob.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{com.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{com.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="{{ com.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#electronic_main_slider"
+        role="button"
+        data-slide="prev"
+      >
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#electronic_main_slider"
+        role="button"
+        data-slide="next"
+      >
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </div>
