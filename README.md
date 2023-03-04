@@ -1,4 +1,4 @@
-# Eutropia-IT-Eflyer_E_Com-main
+# Eutropia-IT-Task2-Basic-ecommerce-website
 
 Pleaase install the requirements.txt by using this command: pip install -r requirements.txt
 
