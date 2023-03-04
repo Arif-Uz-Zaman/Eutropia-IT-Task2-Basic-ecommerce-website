@@ -1,4 +1,4 @@
-# utropia-IT-Task2-Basic-ecommerce-website
+# Eutropia-IT-Task2-Basic-ecommerce-website
 
 Pleaase install the requirements.txt by using this command: pip install -r requirements.txt
 
