@@ -64,7 +64,9 @@ h6 {
 h1 {
     font-size: 24px
 }
-
+.h24{
+    margin-top: 40px;
+}
 h2 {
     font-size: 22px
 }
@@ -214,7 +216,7 @@ button {
 .banner_bg_main {
     width: 100%;
     float: left;
-    background-image: url(All_images/All_images/banner-bg.png);
+    background-image: url(/All_images/All_images/banner-bg.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -723,7 +725,7 @@ a:hover {
 .jewellery_section {
     width: 100%;
     float: left;
-    padding-bottom: 50px;
+   
 }
 
 .jewellery_img {
@@ -767,7 +769,8 @@ a:hover {
 .loader_main {
     width: 100%;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 150px;
+    margin-bottom: 30px;
 }
 
 .loader {

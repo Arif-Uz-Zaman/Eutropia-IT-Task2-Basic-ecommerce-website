@@ -3,6 +3,8 @@
 <div class="fashion_section">
     <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
+      {% for lap1,mob1,com1 in electronics %}
+        {% if forloop.counter0 == 0 %}
         <div class="carousel-item active">
           <div class="container">
             <h1 class="fashion_taital">Electronic</h1>
@@ -10,12 +12,12 @@
               <div class="row">
                 <div class="col-lg-4 col-sm-4">
                   <div class="box_main">
-                    <h4 class="shirt_text">Laptop 0</h4>
+                    <h4 class="shirt_text">{{lap1.name}}</h4>
                     <p class="price_text">
-                      Start Price <span style="color: #262626">$ 800</span>
+                      Start Price <span style="color: #262626">$ {{lap1.price}}</span>
                     </p>
                     <div class="electronic_img">
-                      <img src="All_images/All_images/laptop-img.png" />
+                      <img src="{{ lap1.image.url }}" />
                     </div>
                     <div class="btn_main">
                       <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -25,12 +27,12 @@
                 </div>
                 <div class="col-lg-4 col-sm-4">
                   <div class="box_main">
-                    <h4 class="shirt_text">T-Mobile</h4>
+                    <h4 class="shirt_text">{{mob1.name}}</h4>
                     <p class="price_text">
-                      Start Price <span style="color: #262626">$ 230</span>
+                      Start Price <span style="color: #262626">$ {{mob1.price}}</span>
                     </p>
                     <div class="electronic_img">
-                      <img src="All_images/All_images/mobile-img.png" />
+                      <img src="{{ mob1.image.url }}" />
                     </div>
                     <div class="btn_main">
                       <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -40,12 +42,12 @@
                 </div>
                 <div class="col-lg-4 col-sm-4">
                   <div class="box_main">
-                    <h4 class="shirt_text">Computer core i5</h4>
+                    <h4 class="shirt_text">{{com1.name}}</h4>
                     <p class="price_text">
-                      Start Price <span style="color: #262626">$ 1100</span>
+                      Start Price <span style="color: #262626">$ {{com1.price}}</span>
                     </p>
                     <div class="electronic_img">
-                      <img src="All_images/All_images/computer-img.png" />
+                      <img src="{{ com1.image.url }}" />
                     </div>
                     <div class="btn_main">
                       <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -56,8 +58,13 @@
               </div>
             </div>
           </div>
+          {% endif %} 
+        {% endfor %} 
         </div>
-      {% for lap,mob,com in electronics %}
+      {% for lap,mob,com in electronics1 %}
+        {% if forloop.first %}
+          
+        {% else %}
         <div class="carousel-item">
           <div class="container">
             <h1 class="fashion_taital">Electronic</h1>
@@ -113,6 +120,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
       {% endfor %}
       </div>
       <a

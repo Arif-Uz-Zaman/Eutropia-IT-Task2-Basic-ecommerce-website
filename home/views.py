@@ -20,13 +20,19 @@ def index(request):
     wcloths =WCloths.objects.all()
     scloths =SCloths.objects.all()
     zipped = zip_longest(tcloths, scloths,wcloths)
+    zipped1 = zip_longest(tcloths, scloths,wcloths)
     electronics=zip_longest(laptop,mobile,computer)
+    electronics1=zip_longest(laptop,mobile,computer)
     Jewellery =zip_longest(jumka,Necklace,kangan)
+    Jewellery1 =zip_longest(jumka,Necklace,kangan)
 
     context = {
         "zipped":zipped,
+        "zipped1":zipped1,
         "electronics":electronics,
-        "Jewellery":Jewellery 
+        "electronics1":electronics1,
+        "Jewellery":Jewellery,
+        "Jewellery1":Jewellery1 
 
     }
     return render(request, 'index.html', context=context)
