@@ -4,6 +4,7 @@ from django.db import models
 
 #<-------- Fashion modele start------>
 
+#here TCloths means Tshirt cloth, SCloths means Shirt cloth, WCloths means Women cloth
 class TCloths(models.Model):
     name = models.CharField(max_length=255)
     price = models.FloatField()

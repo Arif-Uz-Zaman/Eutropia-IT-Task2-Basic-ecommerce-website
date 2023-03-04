@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from itertools import zip_longest
-
-
 from .models import TCloths,SCloths,WCloths,Laptop,Mobile,Computer,Jumkas,Kangans,Necklaces
+
 
 
 def index(request):
@@ -20,10 +19,10 @@ def index(request):
 
     #<-------- Clothes Data  fetching from  model------>
     tcloths =TCloths.objects.all()
-    wcloths =WCloths.objects.all()
-    scloths =SCloths.objects.all()
+    wcloths =WCloths.objects.all()               #here TCloths means Tshirt cloth, SCloths means Shirt cloth, WCloths means Women cloth
+    scloths =SCloths.objects.all()                
 
-    
+
     zipped = zip_longest(tcloths, scloths,wcloths)
     zipped1 = zip_longest(tcloths, scloths,wcloths)
     electronics=zip_longest(laptop,mobile,computer)
