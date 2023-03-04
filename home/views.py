@@ -6,19 +6,24 @@ from itertools import zip_longest
 from .models import TCloths,SCloths,WCloths,Laptop,Mobile,Computer,Jumkas,Kangans,Necklaces
 
 
-# Create your views here.
-
 def index(request):
-    # return JsonResponse({'foo':'bar'})
+
+    #<-------- Jewellery Data  fetching from  model------>
     jumka=Jumkas.objects.all()
     kangan=Kangans.objects.all()
     Necklace=Necklaces.objects.all()
+
+    #<-------- Electronics Data  fetching from  model------>
     computer= Computer.objects.all()
     laptop =Laptop.objects.all()
     mobile = Mobile.objects.all()
+
+    #<-------- Clothes Data  fetching from  model------>
     tcloths =TCloths.objects.all()
     wcloths =WCloths.objects.all()
     scloths =SCloths.objects.all()
+
+    
     zipped = zip_longest(tcloths, scloths,wcloths)
     zipped1 = zip_longest(tcloths, scloths,wcloths)
     electronics=zip_longest(laptop,mobile,computer)
