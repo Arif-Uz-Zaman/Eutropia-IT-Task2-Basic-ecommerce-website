@@ -4,22 +4,22 @@ from django.db import models
 
 #<-------- Fashion modele start------>
 
-#here TCloths means Tshirt cloth, SCloths means Shirt cloth, WCloths means Women cloth
-class TCloths(models.Model):
+
+class TshirtCloths(models.Model):
     name = models.CharField(max_length=255)
     price = models.FloatField()
     image = models.ImageField(upload_to='All_images')
     def __str__(self):
         return f"{self.name}   ({self.price})"
     
-class SCloths(models.Model):
+class ShirtCloths(models.Model):
     name = models.CharField(max_length=255)
     price = models.FloatField()
     image = models.ImageField(upload_to='All_images')
     def __str__(self):
         return f"{self.name}   ({self.price})"
     
-class WCloths(models.Model):
+class WomenCloths(models.Model):
     name = models.CharField(max_length=255)
     price = models.FloatField()
     image = models.ImageField(upload_to='All_images')

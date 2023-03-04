@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import TCloths,SCloths,WCloths,Laptop,Mobile,Computer,Jumkas,Kangans,Necklaces
-admin.site.register(TCloths)
-admin.site.register(WCloths)
-admin.site.register(SCloths)
+from .models import TshirtCloths,ShirtCloths,WomenCloths,Laptop,Mobile,Computer,Jumkas,Kangans,Necklaces
+admin.site.register(TshirtCloths)
+admin.site.register(WomenCloths)
+admin.site.register(ShirtCloths)
 admin.site.register(Laptop)
 admin.site.register(Mobile)
 admin.site.register(Computer)
